@@ -9,7 +9,7 @@ def generator_numbers(text: str):
     :return: генератор чисел float, які знайдені в тексті
     """
      
-    pattern = r"\b\d+(?:\.\d+)?\b" # шукає числа з десятковою точкою
+    pattern = r" \d+(?:\.\d+)? " # шукає числа з десятковою точкою
     for match in re.findall(pattern, text):
         yield float(match)
 
